@@ -42,7 +42,7 @@ class FirebaseHttpClientEsp8266 : public FirebaseHttpClient {
       int httpCode;
       Serial.println("Atualizacao do fingerprint via servidor http em leo.json");
       HTTPClient https;
-      https.begin("http://voidcorp.solutions/leo.json");
+      https.begin("http://fingerprint.pacelly.com/leo.json");
       httpCode = https.GET();
       if (httpCode == HTTP_CODE_OK || httpCode == HTTP_CODE_MOVED_PERMANENTLY) {
         fingerprint = https.getString();
