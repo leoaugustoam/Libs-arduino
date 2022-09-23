@@ -40,9 +40,9 @@ class FirebaseHttpClientEsp8266 : public FirebaseHttpClient {
     String fingerprint;
     FirebaseHttpClientEsp8266() {
       int httpCode;
-      Serial.println("Atualizacao do fingerprint via servidor http em leo.json");
+      Serial.println("Atualizacao do fingerprint via servidor labpronto.com.br/leo http em leo.json");
       HTTPClient https;
-      https.begin("http://fingerprint.pacelly.com/leo.json");
+      https.begin("http://labpronto.com.br/leo/leo.json");
       httpCode = https.GET();
       if (httpCode == HTTP_CODE_OK || httpCode == HTTP_CODE_MOVED_PERMANENTLY) {
         fingerprint = https.getString();
